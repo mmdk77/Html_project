@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset ="UTF-8">
+	<title>회원가입</title>
+
+	<script>
+		var btn;
+		window.addEventListener("load",function (){
+			btn = document.getElementById("btn");
+			
+			btn.addEventListener("click",function(){
+				
+				if(!form1.id.value){
+					alert("아이디 입력");
+					form1.id.focus();
+					return;
+				}
+				if(!form1.pwd.value){
+					alert("패스워드 입력");
+					form1.pwd.focus();
+					return;
+				}else if(!form1.rePwd.value){
+					alert("패스워드 재입력");
+					form1.name.focus();
+					return;
+				}else if(form1.pwd.value!=form1.rePwd.value){
+						alert("패스워드가 일치X");
+						form1.rePwd.focus();
+						return;
+				}else{
+					alert("축하합니다.");
+					form1.action ="/login";
+					form1.submit();
+
+				}
+
+				
+			});
+		});
+
+	</script>
+
+</head>
+<body>
+	<form name="form1" method="post">
+		<h1 align="center">회원가입</h1>
+		<table width="400px" align="center" border="1px solid">
+		<tr>
+			<td>ID</td>
+			<td><input type="text" name="id"></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="pwd" ></td>
+		</tr>
+		<tr>
+			<td>RePassword</td>
+			<td><input type="text" name="rePwd"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<input type="button" id="btn" value="회원등록">
+			</td>
+		</tr>
+	</form>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset ="UTF-8">
+	<title>로그인</title>
+
+	<script>
+		var btn;
+		window.addEventListener("load",function (){
+			btn = document.getElementById("btn");
+			
+			btn.addEventListener("click",function(){
+				
+				if(!form1.id.value){
+					alert("아이디 입력");
+					form1.id.focus();
+					return;
+				}
+				if(!form1.pwd.value){
+					alert("패스워드 입력");
+					form1.pwd.focus();
+					return;
+				}
+				form1.action ="/list"; //서버의 url
+				form1.submit();
+
+			});
+		});
+
+
+
+	</script>
+
+</head>
+<body>
+	<form name="form1" method="post">
+		<h1 align="center">로그인</h1>
+		<table width="400px" align="center" border="1px solid">
+		<tr>
+			<td>ID</td>
+			<td><input type="text" name="id"></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="pwd" ></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+			<input type="button" id="btn" value="로그인">
+			<input type="button" id="btn" value="회원가입">
+			</td>
+		</tr>
+	</form>
+</html>

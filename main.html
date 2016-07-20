@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset ="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./CSS/myStyle.css" />
+	<title>게시판</title>
+	<style>
+	h1{
+		text-align:center;		
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	</style>
+	<script>
+		
+	</script>
+
+</head>
+<body>
+	<form>
+		<div id="wrapper">
+			<h1>게시판</h1>
+			<div id="title_div">
+				
+				<input type="text">
+				<input type="button" value="검색">
+			</div>
+			<div id="borad_div">
+				<table id="b_table"border="1px solid">
+					<tr id="b_tr">
+						<td id="no">No</td>
+						<td id="writer">글쓴이</td>
+						<td id="header">제목</td>
+						<td id="w_time">글쓴시간</td>
+						<td id="v_num">조회</td>
+					</tr>
+					<!-- //추후 글추가시 테이블 추가내용.
+					<%for(var i=0;i<dataList.length;i++){ %>
+					<% var obj = dataList[i]%>
+						<tr>
+							<td><a href="/detail/<%=obj.id%>"><%=obj.id%></td>
+							<td><%=obj.pwd%></td>
+							<td><%=obj.name%></td>
+						</tr>
+					<%}%>
+					-->
+				</table>
+				<div id="btn_bot">
+					<input type="button" value="글쓰기">
+					<input type="button" value="글삭제">
+				</div>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
