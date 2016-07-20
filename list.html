@@ -13,6 +13,21 @@
 
 	</style>
 	<script>
+		window.addEventListener("load",function(){
+			var write = document.getElementById("write");
+			var delete_board = document.getElementById("delete_board");
+
+			write.addEventListener("click",function(){
+				console.log("글쓰기")
+				
+			
+			});
+			delete_board.addEventListener("click",function(){
+				console.log("글삭제")
+			
+			});
+		
+		});
 		
 	</script>
 
@@ -29,7 +44,9 @@
 			<div id="borad_div">
 				<table id="b_table"border="1px solid">
 					<tr id="b_tr">
-						<td id="no">No</td>
+						<td id="no">No
+						<input type="checkbox">
+						</td>
 						<td id="writer">글쓴이</td>
 						<td id="header">제목</td>
 						<td id="w_time">글쓴시간</td>
@@ -47,8 +64,8 @@
 					-->
 				</table>
 				<div id="btn_bot">
-					<input type="button" value="글쓰기">
-					<input type="button" value="글삭제">
+					<input type="button" value="글쓰기" id="write">
+					<input type="button" value="글삭제" id="delete_board">
 				</div>
 			</div>
 		</div>

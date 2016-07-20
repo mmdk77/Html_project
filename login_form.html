@@ -6,8 +6,10 @@
 
 	<script>
 		var btn;
+		var btn2;
 		window.addEventListener("load",function (){
 			btn = document.getElementById("btn");
+			btn2 = document.getElementById("btn2");
 			
 			btn.addEventListener("click",function(){
 				
@@ -24,6 +26,11 @@
 				form1.action ="/list"; //서버의 url
 				form1.submit();
 
+			});
+
+			btn2.addEventListener("click",function(){
+				form1.action ="/regist";
+				form1.submit();
 			});
 		});
 
@@ -47,7 +54,7 @@
 		<tr>
 			<td colspan="2" align="center">
 			<input type="button" id="btn" value="로그인">
-			<input type="button" id="btn" value="회원가입">
+			<input type="button" id="btn2" value="회원가입">
 			</td>
 		</tr>
 	</form>
